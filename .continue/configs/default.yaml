@@ -1,0 +1,62 @@
+# Continue Kit - Default Configuration
+
+# Model configuration
+models:
+  - title: "GPT-4"
+    provider: openai
+    model: gpt-4
+    apiKey: ${OPENAI_API_KEY}
+
+  - title: "Claude Sonnet"
+    provider: anthropic
+    model: claude-sonnet-4-20250514
+    apiKey: ${ANTHROPIC_API_KEY}
+
+# Rules - auto-loaded from .continue/rules/
+rules:
+  - uses: .continue/rules/*.md
+
+# Prompts - custom slash commands
+prompts:
+  - uses: .continue/prompts/*.md
+
+# Agents - specialist personas
+agents:
+  - uses: .continue/agents/*.md
+
+# Skills - referenced from .agent/skills/
+skills:
+  - path: .agent/skills/
+    autoLoad: true
+
+# Context providers
+contextProviders:
+  - name: "codebase"
+    enabled: true
+  - name: "terminal"
+    enabled: true
+  - name: "diff"
+    enabled: true
+  - name: "openFiles"
+    enabled: true
+
+# MCP Servers
+mcpServers:
+  context7:
+    command: npx
+    args:
+      - "-y"
+      - "@upstash/context7-mcp"
+      - "--api-key"
+      - ${CONTEXT7_API_KEY}
+  
+  shadcn:
+    command: npx
+    args:
+      - "shadcn@latest"
+      - "mcp"
+
+# Data settings
+data:
+  allowAnonymousTelemetry: false
+  disableIndexing: false

@@ -1,0 +1,73 @@
+# Continue Kit - Production Configuration
+
+# Model configuration - production optimized
+models:
+  - title: "GPT-4 Turbo"
+    provider: openai
+    model: gpt-4-turbo
+    apiKey: ${OPENAI_API_KEY}
+    roles:
+      - chat
+      - edit
+
+  - title: "Claude Haiku"
+    provider: anthropic
+    model: claude-haiku-3-20250307
+    apiKey: ${ANTHROPIC_API_KEY}
+    roles:
+      - autocomplete
+
+# Rules - strict production rules
+rules:
+  - uses: .continue/rules/*.md
+
+# Prompts - limited for production
+prompts:
+  - uses: .continue/prompts/plan.md
+  - uses: .continue/prompts/create.md
+
+# Agents - production specialists only
+agents:
+  - uses: .continue/agents/frontend-specialist.md
+  - uses: .continue/agents/backend-specialist.md
+  - uses: .continue/agents/database-architect.md
+  - uses: .continue/agents/performance-optimizer.md
+
+# Skills - production-focused only
+skills:
+  - path: .agent/skills/
+    autoLoad: false
+    include:
+      - clean-code
+      - api-patterns
+      - database-design
+      - performance-profiling
+      - lint-and-validate
+      - vulnerability-scanner
+      - testing-patterns
+
+# Context providers - production safe
+contextProviders:
+  - name: "codebase"
+    enabled: true
+  - name: "diff"
+    enabled: true
+  - name: "openFiles"
+    enabled: true
+  # Disabled in production:
+  # - name: "terminal"
+  #   enabled: false
+
+# MCP Servers - production only
+mcpServers:
+  context7:
+    command: npx
+    args:
+      - "-y"
+      - "@upstash/context7-mcp"
+
+# Data settings - strict production
+data:
+  allowAnonymousTelemetry: false
+  disableIndexing: true
+  disableSharedMemory: true

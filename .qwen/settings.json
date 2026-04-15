@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cp *)"
+      "Bash(cp *)",
+      "Bash(mkdir *)"
     ]
-  }
+  },
+  "$version": 3
 }

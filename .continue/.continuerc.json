@@ -1,0 +1,11 @@
+{
+  "rules": [
+    "rules/*.md"
+  ],
+  "prompts": [
+    "prompts/*.md"
+  ],
+  "agents": [
+    "agents/*.md"
+  ]
+}
