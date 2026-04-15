@@ -24,9 +24,9 @@ prompts:
 agents:
   - uses: .continue/agents/*.md
 
-# Skills - referenced from .agent/skills/
+# Skills - referenced from .continue/skills/
 skills:
-  - path: .agent/skills/
+  - path: .continue/skills/
     autoLoad: true
 
 # Context providers

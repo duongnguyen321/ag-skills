@@ -35,7 +35,7 @@ agents:
 
 # Skills - production-focused only
 skills:
-  - path: .agent/skills/
+  - path: .continue/skills/
     autoLoad: false
     include:
       - clean-code

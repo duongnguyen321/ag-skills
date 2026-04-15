@@ -9,11 +9,11 @@
 Continue Kit is a modular system for Continue IDE integration, providing:
 
 - **11 Specialist Agents** - Role-based AI personas
-- **31 Skills** - Domain-specific knowledge modules (in `.agent/skills/`)
+- **31 Skills** - Domain-specific knowledge modules (in `.continue/skills/`)
 - **3 Prompts** - Custom slash commands
-- **20 Scripts** - Validation tools (in `.agent/scripts/`)
+- **20 Scripts** - Validation tools (in `.continue/scripts/`)
 
-**Note:** Continue uses `.agent/skills/` for skills (shared with other AI tools).
+**Note:** Continue uses `.continue/skills/` for skills (shared with other AI tools).
 
 ---
 
@@ -30,10 +30,10 @@ Continue Kit is a modular system for Continue IDE integration, providing:
 └── assistants/                  # Assistant definitions (optional)
 ```
 
-### Shared Resources (from .agent/)
+### Shared Resources (from .continue/)
 
 ```plaintext
-.agent/
+.continue/
 ├── skills/                      # 31 Skills (shared across AI tools)
 │   ├── api-patterns/
 │   ├── architecture/
@@ -124,9 +124,9 @@ mcpServers:
 | Metric              | Value                                 |
 |---------------------|---------------------------------------|
 | **Total Agents**    | 11                                    |
-| **Total Skills**    | 31 (in `.agent/skills/`)              |
+| **Total Skills**    | 31 (in `.continue/skills/`)              |
 | **Total Prompts**   | 3                                     |
-| **Total Scripts**   | 20 (in `.agent/scripts/`)             |
+| **Total Scripts**   | 20 (in `.continue/scripts/`)             |
 
 ---
 
@@ -144,16 +144,3 @@ mcpServers:
 | SEO          | `seo-specialist`        | seo-fundamentals, geo-fundamentals                      |
 | Mobile       | -                       | mobile-design                                           |
 | Code Quality | `code-archaeologist`    | clean-code, code-review-checklist                       |
-
----
-
-## Continue vs Other AI Tools
-
-| Feature | Continue | Claude Code | Antigravity |
-|---------|----------|-------------|-------------|
-| **Config** | config.yaml + .continuerc.json | settings.json | mcp_config.json |
-| **Structure** | Simple (rules/, prompts/, agents/) | Complex (skills/, commands/, hooks/, etc.) | Complex (skills/, workflows/, scripts/) |
-| **Skills Location** | References `.agent/skills/` | `.claude/skills/` | `.agent/skills/` |
-| **IDE Integration** | VS Code, JetBrains | Terminal-based | Terminal-based |
-| **Focus** | Autocomplete + Chat + Agent | Multi-agent orchestration | Multi-agent orchestration |
-| **Best For** | IDE workflows, quick tasks | Complex projects, team collaboration | Complex projects, team collaboration |

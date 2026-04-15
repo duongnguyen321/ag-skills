@@ -1,9 +1,41 @@
 {
+  "model": {
+    "default": "qwen-coder-plus-latest",
+    "fallback": "qwen-plus-latest",
+    "providers": [
+      {
+        "name": "qwen",
+        "apiKey": "${DASHSCOPE_API_KEY}",
+        "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1"
+      }
+    ]
+  },
   "permissions": {
     "allow": [
-      "Bash(cp *)",
-      "Bash(mkdir *)"
-    ]
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Agent"
+    ],
+    "deny": []
+  },
+  "includeDirectories": [
+    ".qwen/skills",
+    ".qwen/agents",
+    ".qwen/commands"
+  ],
+  "hooks": {
+    "sessionStart": [],
+    "sessionEnd": [],
+    "preToolUse": [],
+    "postToolUse": []
+  },
+  "env": {
+    "SKILLS_PATH": ".qwen/skills:.qwen/skills",
+    "AGENTS_PATH": ".qwen/agents"
   },
   "$version": 3
 }

@@ -191,8 +191,8 @@ When user's prompt is NOT in English:
 **Path Awareness:**
 
 - Agents: `.continue/agents/` (Project)
-- Skills: `.agent/skills/` (Project) - Continue references .agent skills
-- Runtime Scripts: `.agent/skills/<skill>/scripts/` (Project)
+- Skills: `.continue/skills/` (Project) - Continue references .continue skills
+- Runtime Scripts: `.continue/skills/<skill>/scripts/` (Project)
 
 ### Read - Understand - Apply
 
@@ -246,8 +246,8 @@ CORRECT: Read - Understand WHY - Apply PRINCIPLES - Code
 
 | Task Stage | Command | Purpose |
 |------------|---------|---------|
-| **Manual Audit** | `python .agent/scripts/checklist.py .` | Priority-based project audit |
-| **Pre-Deploy** | `python .agent/scripts/checklist.py . --url <URL>` | Full Suite + Performance + E2E |
+| **Manual Audit** | `python .continue/scripts/checklist.py .` | Priority-based project audit |
+| **Pre-Deploy** | `python .continue/scripts/checklist.py . --url <URL>` | Full Suite + Performance + E2E |
 
 **Priority Execution Order:**
 
@@ -306,7 +306,7 @@ CORRECT: Read - Understand WHY - Apply PRINCIPLES - Code
 
 ### Key Scripts
 
-- **Verify**: `.agent/scripts/verify_all.py`, `.agent/scripts/checklist.py`
+- **Verify**: `.continue/scripts/verify_all.py`, `.continue/scripts/checklist.py`
 - **Scanners**: `security_scan.py`
 - **Audits**: `ux_audit.py`, `mobile_audit.py`, `lighthouse_audit.py`, `seo_checker.py`
 - **Test**: `playwright_runner.py`, `test_runner.py`
