@@ -11,16 +11,5 @@
     ],
     "deny": []
   },
-  "hooks": {
-    "preToolUse": ["hooks/pre-tool-use.sh"],
-    "postToolUse": ["hooks/post-edit.sh"],
-    "sessionStart": [],
-    "sessionEnd": []
-  },
-  "model": {
-    "default": "claude-sonnet-4",
-    "fallback": "claude-opus-4"
-  },
-  "env": {},
-  "outputStyle": "detailed"
+  "env": {}
 }
