@@ -22,11 +22,9 @@
     ],
     "deny": []
   },
-  "includeDirectories": [
-    ".qwen/skills",
-    ".qwen/agents",
-    ".qwen/commands"
-  ],
+  "context": {
+    "includeDirectories": [".qwen/skills", ".qwen/agents", ".qwen/commands"]
+  },
   "hooks": {
     "sessionStart": [],
     "sessionEnd": [],

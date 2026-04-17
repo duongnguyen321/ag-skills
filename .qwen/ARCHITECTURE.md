@@ -109,12 +109,9 @@ Project-level configuration with hierarchical loading.
     "allow": ["Bash", "Read", "Write", "Edit", "Glob", "Grep", "Agent"],
     "deny": []
   },
-  "includeDirectories": [
-    ".qwen/skills",
-    ".qwen/agents",
-    ".qwen/commands",
-    ".qwen/skills"
-  ],
+  "context": {
+    "includeDirectories": [".qwen/skills", ".qwen/agents", ".qwen/commands"]
+  },
   "hooks": {
     "sessionStart": [],
     "sessionEnd": [],
