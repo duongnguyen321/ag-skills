@@ -38,7 +38,7 @@ The entire workflow revolves around three sequential commands:
   3. **Linked source files** - Source code files referenced accurately
   4. **Manual test checklist** - Test tasks defined with checklist
 
-**Output:** `plans/PLAN-{task-slug}.md`
+**Output:** `plans/{index}-PLAN-{task-slug}.md`
 
 **Flow:** `/plan` creates plan - user reviews - proceed to `/create`
 
