@@ -42,7 +42,7 @@ Follow `project-planner.md` Phase 0 (Socratic Gate):
 
 ### Step 3: Create Plan File
 
-Generate `plans/{index}-PLAN-{task-slug}.md` with task breakdown.
+Generate `plans/PLAN-{index}-{task-slug}.md` with task breakdown.
 
 **Naming Rules:**
 1. Extract 2-3 key words from request
@@ -76,7 +76,7 @@ The plan file MUST explicitly satisfy these 4 criteria before proceeding:
 
 | Deliverable | Location |
 |-------------|----------|
-| Project Plan | `plans/{index}-PLAN-{task-slug}.md` |
+| Project Plan | `plans/PLAN-{index}-{task-slug}.md` |
 | Task Breakdown | Inside plan file |
 | Agent Assignments | Inside plan file |
 | Verification Checklist | Phase X in plan file |
@@ -87,7 +87,7 @@ The plan file MUST explicitly satisfy these 4 criteria before proceeding:
 
 Tell user:
 ```
-[OK] Plan created: plans/{index}-PLAN-slug.md
+[OK] Plan created: plans/PLAN-{index}-slug.md
 
 Next steps:
 - Review the plan
@@ -101,11 +101,11 @@ Next steps:
 
 | Request | Plan File |
 |---------|-----------|
-| `/plan e-commerce site with cart` | `plans/1-PLAN-ecommerce-cart.md` |
-| `/plan mobile app for fitness` | `plans/2-PLAN-fitness-app.md` |
-| `/plan add dark mode feature` | `plans/3-PLAN-dark-mode.md` |
-| `/plan fix authentication bug` | `plans/4-PLAN-auth-fix.md` |
-| `/plan SaaS dashboard` | `plans/5-PLAN-saas-dashboard.md` |
+| `/plan e-commerce site with cart` | `plans/PLAN-001-ecommerce-cart.md` |
+| `/plan mobile app for fitness` | `plans/PLAN-002-fitness-app.md` |
+| `/plan add dark mode feature` | `plans/PLAN-003-dark-mode.md` |
+| `/plan fix authentication bug` | `plans/PLAN-004-auth-fix.md` |
+| `/plan SaaS dashboard` | `plans/PLAN-005-saas-dashboard.md` |
 ---
 
 ## Usage
